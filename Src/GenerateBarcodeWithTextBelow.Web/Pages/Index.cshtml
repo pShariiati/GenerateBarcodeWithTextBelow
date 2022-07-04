@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{
+    var productNumberFa = "dkp-4244447";
+    var productTitleFa =
+        "گوشی موبایل اپل مدل iPhone 13 Pro Max A2644 دو سیم‌ کارت ظرفیت 256 گیگابایت و رم 6 گیگابایت تست تست تست تست تست تست";
+
+    var productNumberEn = "B09QM394Y8";
+    var productTitleEn =
+        "ASUS Laptop L510 Ultra Thin Laptop, 15.6” FHD Display, Intel Pentium Silver N5030 Processor, 4GB RAM, 128GB Storage, Windows 11 Home in S Mode, 1 Year Microsoft 365, Star Black, L510MA-DH21";
+}
+
+<div class="text-center">
+    <img src="data:image/png;base64, @BarcodeHelper.GenerateBarcodeWithText(productNumberFa, productTitleFa)" />
+    <img src="data:image/png;base64, @BarcodeHelper.GenerateBarcodeWithText(productNumberEn, productTitleEn)" />
+</div>
